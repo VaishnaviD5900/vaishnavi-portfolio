@@ -1,6 +1,6 @@
 import FadeIn from '@/components/ui/FadeIn'
 
-const CHIPS = ['Angular', 'React', 'Vue.js', 'TypeScript']
+const CHIPS = ['React', 'Vue.js', 'Angular', 'Javascript', 'TypeScript']
 
 export default function Hero() {
   return (

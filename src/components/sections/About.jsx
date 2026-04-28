@@ -45,7 +45,7 @@ export default function About() {
             , I bring both technical depth and design sensibility to every project.
           </p>
           <p className="text-sm text-surface-secondary leading-loose">
-            I recently completed my MSc in Computer Science at the University of
+            I hold MSc in Computer Science from the University of
             Southampton with a Distinction, and I'm currently working at SLB in the UK —
             building tools that support real engineering decisions at scale. I also love
             cricket, cooking, and tending to my little plant collection 🌿

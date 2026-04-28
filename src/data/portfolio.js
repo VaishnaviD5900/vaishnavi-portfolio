@@ -1,16 +1,15 @@
 export const NAV_LINKS = [
-  { label: 'About',        href: '#about' },
-  { label: 'Skills',       href: '#skills' },
-  { label: 'Experience',   href: '#experience' },
-  { label: 'Education',    href: '#education' },
-  { label: 'Projects',     href: '#projects' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact',      href: '#contact' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export const STATS = [
-  { value: '4+',  label: 'Years of experience' },
-  { value: '3',   label: 'Major frameworks mastered' },
+  { value: '4+', label: 'Years of experience' },
   { value: 'MSc', label: 'Distinction — Southampton' },
 ]
 
@@ -41,8 +40,8 @@ export const EXPERIENCE = [
   {
     role: 'Frontend Engineer',
     company: 'SLB',
-    location: 'London, UK',
-    period: 'Sep 2025 – Present',
+    location: 'Oxford, UK',
+    period: 'Sep 2025 - Present',
     color: 'rose',
     description:
       'Working on enterprise data dashboards used by internal teams and external clients for critical engineering decisions. Led the upgrade of a shared Design Library System (DLS) on Angular Material, migrating multiple services from Angular 19 to 21. Introduced Bootstrap and removed redundant SCSS to improve UI consistency.',
@@ -52,7 +51,7 @@ export const EXPERIENCE = [
     role: 'Software Engineer',
     company: 'Soter Safety Consulting',
     location: 'Southampton, UK',
-    period: 'Jan 2025 – Sep 2025',
+    period: 'Jan 2025 - Sep 2025',
     color: 'lavender',
     description:
       'Designed and developed responsive web interfaces focused on data analytics and reporting, including interactive dashboards and export features. Built full-stack applications with Docker and Render, implementing secure authentication and CI/CD workflows.',
@@ -62,7 +61,7 @@ export const EXPERIENCE = [
     role: 'Software Engineer',
     company: 'Dassault Systèmes',
     location: 'Pune, India',
-    period: 'Jul 2022 – Aug 2024',
+    period: 'Jul 2022 - Aug 2024',
     color: 'sage',
     description:
       'Developed and optimised frontend components for a Digital Claims Management platform for Procter & Gamble. Led migration from Vue 2 to Vue 3 with Composition API enhancements. Developed wizard screens enabling Excel and PDF export. Nominated for the Genius Award for excellence in UI implementation.',
@@ -72,7 +71,7 @@ export const EXPERIENCE = [
     role: 'Software Developer Intern',
     company: 'DocketRun Tech',
     location: 'Hubli, India',
-    period: 'Jan 2022 – May 2022',
+    period: 'Jan 2022 - May 2022',
     color: 'peach',
     description:
       'Developed an analytics dashboard tracking UCAM device data for a global automobile manufacturer. Designed responsive UIs using AngularJS, Bootstrap, TypeScript, and Node.js.',
@@ -104,10 +103,10 @@ export const PROJECTS = [
     icon: '🔬',
     title: 'Query Repair Engine Simulator',
     description:
-      'Interactive analytics dashboard to visualise and simulate query optimisation algorithms on large datasets. Includes A/B testing, client-side caching, REST API integration, and a Figma-designed UI validated through user research sessions.',
-    tech: ['React', 'TypeScript', 'REST API', 'Figma'],
-    github: '#',
-    live: '#',
+      'MSc dissertation project — an interactive web tool for repairing SQL queries under aggregate constraints. Features a guided query builder, live visualisations of repaired queries, fairness ratio bars, and performance metrics. Reduced algorithm runtimes from 75 minutes to under 30 seconds via caching. Deployed on Azure with CI/CD via GitHub Actions.',
+    tech: ['React', 'TypeScript', 'FastAPI', 'Python', 'Azure', 'Material UI'],
+    github: 'https://github.com/VaishnaviD5900/efficient-query-repair-demo',
+    live: 'https://query-repair-frontend-cee9fgg6fsdehcdj.uksouth-01.azurewebsites.net/',
   },
   {
     icon: '✈️',
@@ -135,7 +134,7 @@ export const LINKEDIN_RECOMMENDATIONS_URL =
 export const TESTIMONIALS = [
   {
     quote:
-  'I had the pleasure of working closely with Vaishnavi at Dassault Systèmes on a project for a major CPG giant. Vaishnavi consistently demonstrated strong problem-solving abilities, excelling in software engineering tasks. She played a crucial role in building and optimizing key modules using cutting-edge technologies, showcasing her deep understanding of front-end frameworks and development principles.',
+      'I had the pleasure of working closely with Vaishnavi at Dassault Systèmes on a project for a major CPG giant. Vaishnavi consistently demonstrated strong problem-solving abilities, excelling in software engineering tasks. She played a crucial role in building and optimizing key modules using cutting-edge technologies, showcasing her deep understanding of front-end frameworks and development principles.',
     name: 'Srinivasarao Medam',
     role: 'Expert Solutions Architect · Dassault Systèmes',
     initials: 'SM',
