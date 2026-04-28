@@ -42,7 +42,7 @@ function TestimonialCard({ quote, name, role, initials, date }) {
       <div className="border-t border-surface mt-5 pt-4">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-lavender-DEFAULT to-rose-DEFAULT dark:from-lavender-dark/60 dark:to-rose-dark/60 flex items-center justify-center text-xs text-white font-medium shrink-0">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-lavender-dark to-rose-dark flex items-center justify-center text-xs text-white font-medium shrink-0">
               {initials}
             </div>
             <div>
