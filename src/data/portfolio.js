@@ -118,36 +118,42 @@ export const PROJECTS = [
     live: '#',
   },
   {
-    icon: '🍔',
-    title: 'Food Delivery System',
+    icon: '📝',
+    title: 'Console Blog',
     description:
-      'Collaborative MEAN stack platform with restaurant browsing, order & delivery tracking, account management, and a secure payment gateway integration.',
-    tech: ['MongoDB', 'Express', 'Angular', 'Node.js'],
-    github: '#',
-    live: '#',
+      'A frontend developer blog featuring interactive code editors powered by Monaco (VS Code\'s engine), live CSS/HTML/JS playgrounds, and persistent likes via Upstash Redis. Fully SEO optimised with Open Graph tags, sitemaps, per-post meta tags, and Google Search Console integration.',
+    tech: ['React', 'Vite', 'React Router', 'CSS Modules', 'Monaco Editor', 'Upstash Redis', 'Vercel'],
+    github: 'https://github.com/VaishnaviD5900/console-blog',
+    live: 'https://console-blog.vaishnavi-deshpande.com/',
   },
 ]
+
+export const LINKEDIN_RECOMMENDATIONS_URL =
+  'https://www.linkedin.com/in/vaishnavi-p-deshpande/details/recommendations/'
 
 export const TESTIMONIALS = [
   {
     quote:
-      "Vaishnavi's UI work on our claims platform was outstanding. She elevated the experience for thousands of users and was nominated for our internal Genius Award for good reason.",
-    name: 'Team Lead',
-    role: 'Dassault Systèmes · Pune',
-    initials: 'TL',
+  'I had the pleasure of working closely with Vaishnavi at Dassault Systèmes on a project for a major CPG giant. Vaishnavi consistently demonstrated strong problem-solving abilities, excelling in software engineering tasks. She played a crucial role in building and optimizing key modules using cutting-edge technologies, showcasing her deep understanding of front-end frameworks and development principles.',
+    name: 'Srinivasarao Medam',
+    role: 'Expert Solutions Architect · Dassault Systèmes',
+    initials: 'SM',
+    date: 'September 2024',
   },
   {
     quote:
-      'She has a rare combination of technical rigour and design intuition. Her dashboards are not just functional — they\'re genuinely beautiful and easy to use.',
-    name: 'Product Manager',
-    role: 'Soter Safety Consulting · Southampton',
-    initials: 'PM',
+      'I can confidently say she is an outstanding front-end developer. Her expertise in front-end technologies is evident in the high-quality work she consistently delivers. Vaishnavi has an incredible ability to translate design concepts into fully functional, responsive, and visually appealing interfaces. Beyond her technical skills, Vaishnavi possesses excellent communication skills and is a natural problem solver.',
+    name: 'Yugandhar Prashant Indurkar',
+    role: 'Services Software Architect · Dassault Systèmes DSGS',
+    initials: 'YI',
+    date: 'August 2024',
   },
   {
     quote:
-      'The quality of her dissertation work was exceptional. Her query simulator UI was used in real research sessions and received glowing feedback from participants.',
-    name: 'Dissertation Supervisor',
-    role: 'University of Southampton',
-    initials: 'DS',
+      'I was truly impressed by her rapid ability to grasp new concepts and apply them effectively in her work. Her dedication to learning and continuous improvement is evident in her work. Vaishnavi is not only a hard worker but also a team player. She consistently demonstrates a positive attitude and a willingness to collaborate with others.',
+    name: 'Abhishek Alevoor',
+    role: 'Technical Architect · 3DEXPERIENCE Enovia',
+    initials: 'AA',
+    date: 'August 2024',
   },
 ]

@@ -53,12 +53,16 @@ export default function Projects() {
                 <div className="flex gap-3 mt-5 pt-4 border-t border-surface">
                   <a
                     href={github}
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center gap-1.5 text-xs text-surface-secondary hover:text-sage-dark dark:hover:text-sage-DEFAULT transition-colors"
                   >
                     <GithubIcon /> GitHub
                   </a>
                   <a
                     href={live}
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center gap-1.5 text-xs text-surface-secondary hover:text-sage-dark dark:hover:text-sage-DEFAULT transition-colors"
                   >
                     <ExternalIcon /> Live demo
