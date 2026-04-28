@@ -13,7 +13,7 @@ function LinkedInIcon() {
   )
 }
 
-function TestimonialCard({ quote, name, role, initials, date }) {
+function TestimonialCard({ quote, name, role, initials, date, linkedinUrl }) {
   const [expanded, setExpanded] = useState(false)
   const isTruncatable = quote.length > TRUNCATE_LENGTH
   const displayedQuote =
@@ -54,7 +54,7 @@ function TestimonialCard({ quote, name, role, initials, date }) {
             </div>
           </div>
           <a
-            href={LINKEDIN_RECOMMENDATIONS_URL}
+            href={linkedinUrl || LINKEDIN_RECOMMENDATIONS_URL}
             target="_blank"
             rel="noreferrer"
             aria-label="View on LinkedIn"

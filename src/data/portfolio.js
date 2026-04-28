@@ -150,6 +150,15 @@ export const TESTIMONIALS = [
   },
   {
     quote:
+      'Your dedication, enthusiasm, and ability to quickly develop solutions have been nothing short of inspiring. Not only are you a fast learner and an excellent problem-solver, but your exceptional UI design skills consistently elevate our projects. Your contributions are truly invaluable, and we\'re lucky to have you on the team!',
+    name: 'Nisha Patel',
+    role: 'Services Software Expert · Dassault Systèmes DSGS',
+    initials: 'NP',
+    date: '2024',
+    linkedinUrl: 'https://www.linkedin.com/posts/vaishnavi-p-deshpande_uiexcellence-fastlearner-problemsolver-activity-7232282621857136640-ie-A?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC80A3cBMwfkL-PnHXfJeWWQUCSDvucgqaY',
+  },
+  {
+    quote:
       'I was truly impressed by her rapid ability to grasp new concepts and apply them effectively in her work. Her dedication to learning and continuous improvement is evident in her work. Vaishnavi is not only a hard worker but also a team player. She consistently demonstrates a positive attitude and a willingness to collaborate with others.',
     name: 'Abhishek Alevoor',
     role: 'Technical Architect · 3DEXPERIENCE Enovia',
