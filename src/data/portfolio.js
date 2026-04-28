@@ -1,10 +1,11 @@
 export const NAV_LINKS = [
-  { label: 'About',      href: '#about' },
-  { label: 'Skills',     href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education',  href: '#education' },
-  { label: 'Projects',   href: '#projects' },
-  { label: 'Contact',    href: '#contact' },
+  { label: 'About',        href: '#about' },
+  { label: 'Skills',       href: '#skills' },
+  { label: 'Experience',   href: '#experience' },
+  { label: 'Education',    href: '#education' },
+  { label: 'Projects',     href: '#projects' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Contact',      href: '#contact' },
 ]
 
 export const STATS = [
@@ -83,15 +84,15 @@ export const EDUCATION = [
   {
     degree: 'MSc in Computer Science',
     university: 'University of Southampton',
-    period: 'Sept 2024 – Sept 2025',
-    badge: '🏆 Distinction',
+    period: 'Sept 2024 - Sept 2025',
+    badge: 'Distinction',
     modules: 'Software Project Management · Data Visualisation · Mobile & Web Development · Advanced Databases · Software Security',
     highlight: 'Dissertation: Query Repair Engine Simulator — interactive dashboard using React & TypeScript to visualise query optimisation algorithms on large datasets.',
   },
   {
     degree: 'BE in Computer Science',
     university: 'KLE Technological University',
-    period: 'Jul 2018 – Jun 2022',
+    period: 'Jul 2018 - Jun 2022',
     badge: 'CGPA 8.13 / 10',
     modules: 'Web Technologies · Data Structures & Algorithms · DBMS · Computer Networks · OOPS · Internet of Things',
     highlight: 'Projects: Food Delivery System (MEAN stack) and Flight Management System (React + Node.js).',
