@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary:   #FDF8F2;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary:  #F5F0EA;
+    --text-primary:    #2A2320;
+    --text-secondary:  #6B5E58;
+    --text-muted:      #9E8E88;
+    --border-subtle:   rgba(242, 167, 179, 0.25);
+    --border-medium:   rgba(242, 167, 179, 0.45);
+  }
+
+  .dark {
+    --bg-primary:   #0E0C0F;
+    --bg-secondary: #161318;
+    --bg-tertiary:  #1E1A20;
+    --text-primary:    #F0EBF4;
+    --text-secondary:  #B8AEBE;
+    --text-muted:      #6E6275;
+    --border-subtle:   rgba(240, 235, 244, 0.08);
+    --border-medium:   rgba(240, 235, 244, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .bg-surface-primary   { background-color: var(--bg-primary); }
+  .bg-surface-secondary { background-color: var(--bg-secondary); }
+  .bg-surface-tertiary  { background-color: var(--bg-tertiary); }
+  .text-surface-primary   { color: var(--text-primary); }
+  .text-surface-secondary { color: var(--text-secondary); }
+  .text-surface-muted     { color: var(--text-muted); }
+  .border-surface         { border-color: var(--border-subtle); }
+  .border-surface-md      { border-color: var(--border-medium); }
+}
