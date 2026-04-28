@@ -44,8 +44,12 @@ export default function Hero() {
 
         {/* Avatar */}
         <FadeIn delay={150} className="flex flex-col items-center">
-          <div className="w-52 h-52 md:w-64 md:h-64 rounded-[40%_60%_55%_45%_/_45%_55%_60%_40%] bg-gradient-to-br from-rose-DEFAULT to-lavender-DEFAULT dark:from-rose-dark/80 dark:to-lavender-dark/80 flex items-center justify-center font-serif text-7xl text-white border border-white/20 animate-morph shadow-2xl">
-            VD
+          <div className="w-52 h-52 md:w-64 md:h-64 rounded-[40%_60%_55%_45%_/_45%_55%_60%_40%] overflow-hidden border border-white/20 animate-morph shadow-2xl">
+            <img
+              src="/avatar.PNG"
+              alt="Vaishnavi Deshpande"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex flex-wrap gap-2 mt-5 justify-center">
             {CHIPS.map((chip) => (
