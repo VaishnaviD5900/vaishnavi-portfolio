@@ -143,7 +143,7 @@ export const TESTIMONIALS = [
   {
     quote:
       'I can confidently say she is an outstanding front-end developer. Her expertise in front-end technologies is evident in the high-quality work she consistently delivers. Vaishnavi has an incredible ability to translate design concepts into fully functional, responsive, and visually appealing interfaces. Beyond her technical skills, Vaishnavi possesses excellent communication skills and is a natural problem solver.',
-    name: 'Yugandhar Prashant Indurkar',
+    name: 'Yugandhar P Indurkar',
     role: 'Services Software Architect · Dassault Systèmes DSGS',
     initials: 'YI',
     date: 'August 2024',
