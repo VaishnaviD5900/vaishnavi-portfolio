@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Open Source', href: '#opensource' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -164,5 +165,38 @@ export const TESTIMONIALS = [
     role: 'Technical Architect · 3DEXPERIENCE Enovia',
     initials: 'AA',
     date: 'August 2024',
+  },
+]
+
+export const OPEN_SOURCE = [
+  {
+    project: 'PrimeVue',
+    projectUrl: 'https://github.com/primefaces/primevue',
+    description: 'Vue UI Component Library',
+    stars: '14k+',
+    dependents: '20k+',
+    title: 'DataTable Filter Overlay — MultiSelect closes on click',
+    problem:
+      'When using MultiSelect or Select components as filters inside a DataTable column, clicking any option immediately closed the filter overlay without making a selection.',
+    fix:
+      'Traced to ColumnFilter.vue\'s click-outside detection logic. The isOutsideClicked method didn\'t account for nested overlay panels appended to the document body. Added DOM traversal using closest() to correctly identify clicks inside any active overlay panel.',
+    tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
+    issueUrl: 'https://github.com/primefaces/primevue/issues/8537',
+    prUrl: '#',
+  },
+  {
+    project: 'PrimeVue',
+    projectUrl: 'https://github.com/primefaces/primevue',
+    description: 'Vue UI Component Library',
+    stars: '14k+',
+    dependents: '20k+',
+    title: 'TreeSelect — Double click required to close overlay',
+    problem:
+      'Clicking the header slot of a TreeSelect panel caused click-outside-to-close to require two outside clicks instead of one, breaking expected UX behaviour.',
+    fix:
+      'Identified that onOverlayClick was setting selfClick = true without resetting it after the interaction completed. Added a setTimeout reset so the flag clears after all related click events have fired.',
+    tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
+    issueUrl: 'https://github.com/primefaces/primevue/issues/7966',
+    prUrl: '#',
   },
 ]

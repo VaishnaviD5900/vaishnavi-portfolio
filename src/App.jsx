@@ -8,6 +8,7 @@ import Experience from '@/components/sections/Experience'
 import Education from '@/components/sections/Education'
 import Projects from '@/components/sections/Projects'
 import Testimonials from '@/components/sections/Testimonials'
+import OpenSource from '@/components/sections/OpenSource'
 import Contact from '@/components/sections/Contact'
 
 function Portfolio() {
@@ -22,6 +23,7 @@ function Portfolio() {
         <Education />
         <Projects />
         <Testimonials />
+        <OpenSource />
         <Contact />
       </main>
       <Footer />
