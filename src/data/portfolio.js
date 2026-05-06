@@ -182,7 +182,7 @@ export const OPEN_SOURCE = [
       'Traced to ColumnFilter.vue\'s click-outside detection logic. The isOutsideClicked method didn\'t account for nested overlay panels appended to the document body. Added DOM traversal using closest() to correctly identify clicks inside any active overlay panel.',
     tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
     issueUrl: 'https://github.com/primefaces/primevue/issues/8537',
-    prUrl: '#',
+    prUrl: 'https://github.com/primefaces/primevue/pull/8566',
   },
   {
     project: 'PrimeVue',
@@ -197,6 +197,6 @@ export const OPEN_SOURCE = [
       'Identified that onOverlayClick was setting selfClick = true without resetting it after the interaction completed. Added a setTimeout reset so the flag clears after all related click events have fired.',
     tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
     issueUrl: 'https://github.com/primefaces/primevue/issues/7966',
-    prUrl: '#',
+    prUrl: 'https://github.com/primefaces/primevue/pull/8567',
   },
 ]
