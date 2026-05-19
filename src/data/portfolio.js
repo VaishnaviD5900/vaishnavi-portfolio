@@ -178,19 +178,21 @@ export const TESTIMONIALS = [
 
 export const OPEN_SOURCE = [
   {
-    project: 'PrimeVue',
-    projectUrl: 'https://github.com/primefaces/primevue',
-    description: 'Vue UI Component Library',
-    stars: '14k+',
-    dependents: '20k+',
-    title: 'DataTable Filter Overlay — MultiSelect closes on click',
-    problem:
-      'When using MultiSelect or Select components as filters inside a DataTable column, clicking any option immediately closed the filter overlay without making a selection.',
-    fix:
-      'Traced to ColumnFilter.vue\'s click-outside detection logic. The isOutsideClicked method didn\'t account for nested overlay panels appended to the document body. Added DOM traversal using closest() to correctly identify clicks inside any active overlay panel.',
-    tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
-    issueUrl: 'https://github.com/primefaces/primevue/issues/8537',
-    prUrl: 'https://github.com/primefaces/primevue/pull/8566',
+    project: 'Vuetify',
+    projectUrl: 'https://github.com/vuetifyjs/vuetify',
+    description: 'Vue UI Framework',
+    stars: '40k+',
+    dependents: '80k+',
+    contributions: [
+      {
+        title: 'VTreeview — valueComparator prop ignored in selection logic',
+        description:
+          'The valueComparator prop existed in the docs but was not wired into the selection logic, meaning custom equality checks were silently ignored. Traced the issue to the nested selection flow and added a resolveValue() function to map incoming selected and activated values through the comparator before passing them into the selection strategies.',
+        tags: ['Vue.js', 'Component Logic', 'Open Source', 'Debugging'],
+        issueUrl: 'https://github.com/vuetifyjs/vuetify/issues/22013',
+        prUrl: 'https://github.com/vuetifyjs/vuetify/pull/22841',
+      },
+    ],
   },
   {
     project: 'PrimeVue',
@@ -198,13 +200,23 @@ export const OPEN_SOURCE = [
     description: 'Vue UI Component Library',
     stars: '14k+',
     dependents: '20k+',
-    title: 'TreeSelect — Double click required to close overlay',
-    problem:
-      'Clicking the header slot of a TreeSelect panel caused click-outside-to-close to require two outside clicks instead of one, breaking expected UX behaviour.',
-    fix:
-      'Identified that onOverlayClick was setting selfClick = true without resetting it after the interaction completed. Added a setTimeout reset so the flag clears after all related click events have fired.',
-    tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
-    issueUrl: 'https://github.com/primefaces/primevue/issues/7966',
-    prUrl: 'https://github.com/primefaces/primevue/pull/8567',
+    contributions: [
+      {
+        title: 'DataTable Filter Overlay — MultiSelect closes on click',
+        description:
+          'Clicking any option inside a DataTable filter overlay immediately closed it without making a selection. Traced to ColumnFilter.vue\'s isOutsideClicked method which did not account for nested overlay panels appended to the document body. Added DOM traversal using closest() to correctly identify clicks inside any active overlay panel.',
+        tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
+        issueUrl: 'https://github.com/primefaces/primevue/issues/8537',
+        prUrl: 'https://github.com/primefaces/primevue/pull/8566',
+      },
+      {
+        title: 'TreeSelect — Double click required to close overlay',
+        description:
+          'Clicking the header slot of a TreeSelect panel caused click-outside-to-close to require two outside clicks instead of one. onOverlayClick was setting selfClick = true without resetting it after the interaction completed. Added a setTimeout reset so the flag clears after all related click events have fired.',
+        tags: ['Vue.js', 'DOM', 'Event Handling', 'Debugging'],
+        issueUrl: 'https://github.com/primefaces/primevue/issues/7966',
+        prUrl: 'https://github.com/primefaces/primevue/pull/8567',
+      },
+    ],
   },
 ]

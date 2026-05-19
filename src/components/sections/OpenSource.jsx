@@ -15,7 +15,7 @@ function ExternalIcon() {
 
 function GithubIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
     </svg>
   )
@@ -48,66 +48,64 @@ export default function OpenSource() {
 
         <div className="flex flex-col gap-5">
           {OPEN_SOURCE.map((item, i) => (
-            <FadeIn key={item.title} delay={i * 100}>
-              <div className="bg-white dark:bg-ink-500 rounded-2xl p-6 border border-surface dark:border-white/5 hover:border-surface-md dark:hover:border-white/10 hover:-translate-y-1 transition-all duration-200">
+            <FadeIn key={item.project + i} delay={i * 100}>
+              <div className="rounded-2xl border border-surface dark:border-white/5 overflow-hidden grid md:grid-cols-[200px_1fr]">
 
-                <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <div className="flex items-center gap-1.5 bg-sage-light dark:bg-[#1A2E1A] text-sage-dark dark:text-sage-DEFAULT text-xs font-medium px-3 py-1.5 rounded-full">
-                      <GithubIcon />
-                      <a href={item.projectUrl} target="_blank" rel="noreferrer" className="hover:underline">
-                        {item.project}
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-1 text-xs text-surface-muted">
-                      <StarIcon />
-                      <span>{item.stars} stars</span>
-                    </div>
-                    <div className="text-xs text-surface-muted hidden sm:block">
-                      · {item.dependents} dependent repos
-                    </div>
+                {/* Left sidebar */}
+                <div className="bg-peach-light/60 dark:bg-[#2E1E10]/60 border-b md:border-b-0 md:border-r border-surface dark:border-white/5 p-5 flex flex-col gap-3">
+                  <h3 className="font-serif text-xl text-surface-primary">{item.project}</h3>
+
+                  <div className="flex items-center gap-1.5 text-xs text-surface-muted">
+                    <StarIcon />
+                    <span>{item.stars} stars</span>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <a
-                      href={item.issueUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1 text-xs text-surface-secondary hover:text-rose-dark dark:hover:text-rose-DEFAULT transition-colors"
-                    >
-                      <ExternalIcon /> Issue
-                    </a>
-                    <a
-                      href={item.prUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-medium text-white bg-rose-dark px-3.5 py-1.5 rounded-full hover:opacity-90 transition-opacity"
-                    >
-                      <ExternalIcon /> View PR
+                  <p className="text-xs text-surface-muted">{item.dependents} dependent repos</p>
+
+                  <div className="flex items-center gap-1.5 bg-sage-light dark:bg-[#1A2E1A] text-sage-dark dark:text-sage-DEFAULT text-xs font-medium px-2.5 py-1.5 rounded-full w-fit">
+                    <GithubIcon />
+                    <a href={item.projectUrl} target="_blank" rel="noreferrer" className="hover:underline">
+                      {item.description}
                     </a>
                   </div>
+
+                  <p className="text-xs text-surface-muted mt-auto pt-2">
+                    {item.contributions.length} {item.contributions.length === 1 ? 'contribution' : 'contributions'}
+                  </p>
                 </div>
 
-                <h3 className="font-serif text-lg mb-4">{item.title}</h3>
+                {/* Right content */}
+                <div className="bg-white dark:bg-ink-500 p-5 flex flex-col divide-y divide-surface dark:divide-white/5">
+                  {item.contributions.map((contrib, j) => (
+                    <div key={j} className={j > 0 ? 'pt-5' : ''} style={j < item.contributions.length - 1 ? {paddingBottom: '1.25rem'} : {}}>
+                      <h4 className="font-medium text-sm text-surface-primary mb-2">{contrib.title}</h4>
+                      <p className="text-xs text-surface-secondary leading-loose mb-3">{contrib.description}</p>
 
-                <div className="grid sm:grid-cols-2 gap-3 mb-4">
-                  <div className="bg-rose-light/50 dark:bg-[#3D1E28]/50 rounded-xl p-4">
-                    <p className="text-xs font-medium text-rose-dark dark:text-rose-DEFAULT uppercase tracking-widest mb-2">
-                      The Bug
-                    </p>
-                    <p className="text-xs text-surface-secondary leading-relaxed">{item.problem}</p>
-                  </div>
-                  <div className="bg-sage-light/50 dark:bg-[#1A2E1A]/50 rounded-xl p-4">
-                    <p className="text-xs font-medium text-sage-dark dark:text-sage-DEFAULT uppercase tracking-widest mb-2">
-                      The Fix
-                    </p>
-                    <p className="text-xs text-surface-secondary leading-relaxed">{item.fix}</p>
-                  </div>
-                </div>
+                      <div className="flex items-center gap-3 mb-3">
+                        <a
+                          href={contrib.issueUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-1 text-xs text-surface-secondary hover:text-rose-dark dark:hover:text-rose-DEFAULT transition-colors"
+                        >
+                          <ExternalIcon /> Issue
+                        </a>
+                        <a
+                          href={contrib.prUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-1.5 text-xs font-medium text-white bg-rose-dark px-3 py-1.5 rounded-full hover:opacity-90 transition-opacity"
+                        >
+                          <ExternalIcon /> View PR
+                        </a>
+                      </div>
 
-                <div className="flex flex-wrap gap-1.5">
-                  {item.tags.map((tag) => (
-                    <Tag key={tag} label={tag} color="lavender" />
+                      <div className="flex flex-wrap gap-1.5">
+                        {contrib.tags.map((tag) => (
+                          <Tag key={tag} label={tag} color="lavender" />
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
 
