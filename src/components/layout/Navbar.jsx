@@ -51,9 +51,9 @@ export default function Navbar() {
             aria-label="Toggle menu"
             className="md:hidden flex flex-col gap-[5px] p-1.5"
           >
-            <span className={`block w-5 h-0.5 bg-surface-secondary transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-surface-secondary transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-surface-secondary transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-rose-dark dark:bg-rose-DEFAULT transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+<span className={`block w-5 h-0.5 bg-rose-dark dark:bg-rose-DEFAULT transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+<span className={`block w-5 h-0.5 bg-rose-dark dark:bg-rose-DEFAULT transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
           </button>
         </div>
       </div>

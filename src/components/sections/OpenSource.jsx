@@ -42,7 +42,7 @@ export default function OpenSource() {
             Open Source
           </h2>
           <p className="text-sm text-surface-secondary leading-loose mb-10 max-w-xl">
-            Bug fixes contributed to production open source libraries used by thousands of developers worldwide.
+            Bug fixes contributed to production open source libraries.
           </p>
         </FadeIn>
 
