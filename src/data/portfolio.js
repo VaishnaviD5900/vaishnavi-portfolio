@@ -135,6 +135,14 @@ export const LINKEDIN_RECOMMENDATIONS_URL =
 export const TESTIMONIALS = [
   {
     quote:
+      'At Soter Safety Consulting, we were lucky to have Vaishnavi as one of the founding developers on our team. She was an outstanding addition — bringing exceptional technical skills, a strong work ethic, and a commitment to delivering high-quality results. Vaishnavi is a strong full-stack developer with the ability to contribute across all parts of an application. That ability to combine functionality, design sense, and full-stack technical capability is a rare and valuable strength.',
+    name: 'Ngozi Chinye',
+    role: 'Founder · Soter Safety Consulting',
+    initials: 'NC',
+    date: 'May 2026',
+  },
+  {
+    quote:
       'I had the pleasure of working closely with Vaishnavi at Dassault Systèmes on a project for a major CPG giant. Vaishnavi consistently demonstrated strong problem-solving abilities, excelling in software engineering tasks. She played a crucial role in building and optimizing key modules using cutting-edge technologies, showcasing her deep understanding of front-end frameworks and development principles.',
     name: 'Srinivasarao Medam',
     role: 'Expert Solutions Architect · Dassault Systèmes',
